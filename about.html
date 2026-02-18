@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Atlas | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <header class="site-header">
+      <a class="logo" href="index.html">Algorithm Atlas</a>
+      <div class="header-right">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="sort.html">Sort</a>
+          <a href="greedy.html">Greedy</a>
+          <a class="active" href="about.html">About</a>
+        </nav>
+        <form class="algo-search-form" data-algo-search>
+          <input type="text" list="algo-list" name="algorithm" placeholder="Find algorithm..." />
+          <button type="submit">Go</button>
+        </form>
+      </div>
+    </header>
+
+    <datalist id="algo-list">
+      <option value="Linear Search"></option>
+      <option value="Binary Search"></option>
+      <option value="Breadth First Search"></option>
+      <option value="Depth First Search"></option>
+      <option value="Bubble Sort"></option>
+      <option value="Selection Sort"></option>
+      <option value="Insertion Sort"></option>
+      <option value="Merge Sort"></option>
+      <option value="Quick Sort"></option>
+      <option value="Interval Scheduling"></option>
+      <option value="Interval Partitioning"></option>
+      <option value="Minimize Lateness"></option>
+      <option value="Dijkstra"></option>
+      <option value="Kruskal"></option>
+      <option value="Prim"></option>
+      <option value="Reverse Delete"></option>
+    </datalist>
+
+    <main class="container">
+      <section class="hero reveal">
+        <h1>About Me</h1>
+        <p>
+          I am a second-year student at the University of Texas at Austin studying Computer
+          Science. I built this website to help myself visualize what I have been learning in my Algorithms
+          and Complexity class. Turning abstract proofs and runtime ideas into step-by-step visuals
+          made the material more intuitive and easier to explain.
+        </p>
+      </section>
+
+      <section class="about-layout reveal delay-1">
+        <article class="panel">
+          <h2>Why I Built This</h2>
+          <p>
+            In class, many ideas are presented in pseudocode or theorem form. I wanted a tool that
+            showed the algorithm state evolving in real time, so I could directly connect
+            correctness arguments with what the algorithm is doing at each step.
+          </p>
+          <p>
+            The site follows a common step-engine pattern: algorithm logic emits events and the UI
+            renders those events with controls for stepping, playback speed, and backtracking.
+          </p>
+          <div class="profile-links">
+            <a class="btn btn-muted" href="https://github.com/BaileyKoh" target="_blank" rel="noreferrer">GitHub Profile</a>
+            <a class="btn btn-muted" href="https://linkedin.com/in/baileykoh" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-muted" href="https://www.instagram.com/bailey_koh/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="btn btn-muted" href="mailto:baileykoh@gmail.com">baileykoh@gmail.com</a>
+            <span class="chip">UT Austin • Computer Science</span>
+          </div>
+        </article>
+
+        <aside class="portrait">
+          <img src="headshot.png" alt="Headshot of Bailey Koh" />
+        </aside>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="algo-search.js"></script>
+  </body>
+</html>

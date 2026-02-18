@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Atlas | Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <header class="site-header">
+      <a class="logo" href="index.html">Algorithm Atlas</a>
+      <div class="header-right">
+        <nav>
+          <a href="index.html">Home</a>
+          <a class="active" href="search.html">Search</a>
+          <a href="sort.html">Sort</a>
+          <a href="greedy.html">Greedy</a>
+          <a href="about.html">About</a>
+        </nav>
+        <form class="algo-search-form" data-algo-search>
+          <input type="text" list="algo-list" name="algorithm" placeholder="Find algorithm..." />
+          <button type="submit">Go</button>
+        </form>
+      </div>
+    </header>
+
+    <datalist id="algo-list">
+      <option value="Linear Search"></option>
+      <option value="Binary Search"></option>
+      <option value="Breadth First Search"></option>
+      <option value="Depth First Search"></option>
+      <option value="Bubble Sort"></option>
+      <option value="Selection Sort"></option>
+      <option value="Insertion Sort"></option>
+      <option value="Merge Sort"></option>
+      <option value="Quick Sort"></option>
+      <option value="Interval Scheduling"></option>
+      <option value="Interval Partitioning"></option>
+      <option value="Minimize Lateness"></option>
+      <option value="Dijkstra"></option>
+      <option value="Kruskal"></option>
+      <option value="Prim"></option>
+      <option value="Reverse Delete"></option>
+    </datalist>
+
+    <main class="container">
+      <section class="hero reveal">
+        <h1>Search Algorithms</h1>
+        <p>
+          A search algorithm locates a target element or explores reachable states in a data
+          structure such as an array or graph.
+        </p>
+      </section>
+
+      <section class="viz-grid reveal delay-1">
+        <aside class="info-column">
+          <div class="panel">
+            <h3>Concept</h3>
+            <p id="searchConcept"></p>
+          </div>
+
+          <div class="panel algo-details">
+            <h3>Algorithm Details</h3>
+            <h4>Problem</h4>
+            <p id="searchProblem"></p>
+            <h4>Logic</h4>
+            <p id="searchLogic"></p>
+            <h4>Pseudocode</h4>
+            <pre id="searchPseudocode"></pre>
+            <h4>Complexity</h4>
+            <p id="searchComplexity"></p>
+          </div>
+        </aside>
+
+        <article class="panel">
+          <h2>Visualization</h2>
+          <div class="algo-tabs" id="searchAlgoTabs">
+            <button data-mode="linear" class="active">Linear Search</button>
+            <button data-mode="binary">Binary Search</button>
+            <button data-mode="bfs">Breadth First Search</button>
+            <button data-mode="dfs">Depth First Search</button>
+          </div>
+
+          <div id="arraySection">
+            <div id="arrayView"></div>
+          </div>
+
+          <div id="graphSection" style="display: none; margin-top: 0.75rem">
+            <svg id="graphView" class="graph" viewBox="0 0 700 430"></svg>
+          </div>
+        </article>
+
+        <aside class="panel controls">
+          <h3>Controls</h3>
+          <label id="targetControl">
+            Search Target
+            <input id="targetInput" type="number" value="31" />
+          </label>
+          <label>
+            Speed (ms)
+            <input id="speedInput" type="range" min="100" max="1200" value="450" step="50" />
+          </label>
+          <div class="row">
+            <button id="buildBtn">Build Steps</button>
+            <button id="playBtn">Play</button>
+            <button id="pauseBtn">Pause</button>
+          </div>
+          <div class="row">
+            <button id="stepBtn">Step</button>
+            <button id="backBtn">Back</button>
+            <button id="resetBtn">Reset</button>
+          </div>
+
+          <div class="panel">
+            <h3>State</h3>
+            <div class="info-list" id="searchState"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="algo-search.js"></script>
+    <script src="search.js"></script>
+  </body>
+</html>

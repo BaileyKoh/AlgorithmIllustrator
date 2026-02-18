@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Atlas | Sort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <header class="site-header">
+      <a class="logo" href="index.html">Algorithm Atlas</a>
+      <div class="header-right">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a class="active" href="sort.html">Sort</a>
+          <a href="greedy.html">Greedy</a>
+          <a href="about.html">About</a>
+        </nav>
+        <form class="algo-search-form" data-algo-search>
+          <input type="text" list="algo-list" name="algorithm" placeholder="Find algorithm..." />
+          <button type="submit">Go</button>
+        </form>
+      </div>
+    </header>
+
+    <datalist id="algo-list">
+      <option value="Linear Search"></option>
+      <option value="Binary Search"></option>
+      <option value="Breadth First Search"></option>
+      <option value="Depth First Search"></option>
+      <option value="Bubble Sort"></option>
+      <option value="Selection Sort"></option>
+      <option value="Insertion Sort"></option>
+      <option value="Merge Sort"></option>
+      <option value="Quick Sort"></option>
+      <option value="Interval Scheduling"></option>
+      <option value="Interval Partitioning"></option>
+      <option value="Minimize Lateness"></option>
+      <option value="Dijkstra"></option>
+      <option value="Kruskal"></option>
+      <option value="Prim"></option>
+      <option value="Reverse Delete"></option>
+    </datalist>
+
+    <main class="container">
+      <section class="hero reveal">
+        <h1>Sorting Algorithms</h1>
+        <p>
+          A sorting algorithm reorders a sequence into a chosen order (typically nondecreasing)
+          according to a comparison rule.
+        </p>
+      </section>
+
+      <section class="viz-grid reveal delay-1">
+        <aside class="info-column">
+          <div class="panel">
+            <h3>Concept</h3>
+            <p id="sortConcept"></p>
+          </div>
+
+          <div class="panel algo-details">
+            <h3>Algorithm Details</h3>
+            <h4>Problem</h4>
+            <p id="sortProblem"></p>
+            <h4>Logic</h4>
+            <p id="sortLogic"></p>
+            <h4>Pseudocode</h4>
+            <pre id="sortPseudocode"></pre>
+            <h4>Complexity</h4>
+            <p id="sortComplexity"></p>
+          </div>
+        </aside>
+
+        <article class="panel">
+          <h2>Visualization</h2>
+          <div id="sortArrayView"></div>
+        </article>
+
+        <aside class="panel controls">
+          <h3>Controls</h3>
+          <div class="algo-tabs" id="sortAlgoTabs">
+            <button data-mode="bubble" class="active">Bubble Sort</button>
+            <button data-mode="selection">Selection Sort</button>
+            <button data-mode="insertion">Insertion Sort</button>
+            <button data-mode="merge">Merge Sort</button>
+            <button data-mode="quick">Quick Sort</button>
+          </div>
+          <label>
+            Array Size
+            <input id="sizeInput" type="range" min="8" max="30" value="16" />
+          </label>
+          <label>
+            Speed (ms)
+            <input id="sortSpeed" type="range" min="60" max="900" value="250" step="10" />
+          </label>
+
+          <div class="row">
+            <button id="newArrayBtn">New Array</button>
+            <button id="buildSortBtn">Build Steps</button>
+            <button id="playSortBtn">Play</button>
+            <button id="pauseSortBtn">Pause</button>
+          </div>
+          <div class="row">
+            <button id="stepSortBtn">Step</button>
+            <button id="backSortBtn">Back</button>
+            <button id="resetSortBtn">Reset</button>
+          </div>
+
+          <div class="panel">
+            <h3>State</h3>
+            <div class="info-list" id="sortState"></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="algo-search.js"></script>
+    <script src="sort.js"></script>
+  </body>
+</html>
